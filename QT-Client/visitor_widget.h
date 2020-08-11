@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include<QString>
+#include<QTcpSocket>
 
 namespace Ui {
 class Visitor_Widget;
@@ -17,7 +18,9 @@ public:
     ~Visitor_Widget();
 
 private slots:
-    void on_pushButton_5_clicked();
+    void slot_send();
+    void slot_recv();
+    void slot_disconnect();
 
 private:
     Ui::Visitor_Widget *ui;
@@ -25,6 +28,7 @@ private:
     QString buy_date;
     QString sell_date;
     int strategy_index;
+    QTcpSocket * tcp_socket;
 
 };
 
