@@ -165,7 +165,7 @@ public:
         pushButton_4->setText(QApplication::translate("Visitor_Widget", "\347\255\226\347\225\245\351\200\211\346\213\251", nullptr));
         comboBox->setItemText(0, QApplication::translate("Visitor_Widget", "\346\257\217\346\227\245\345\256\232\346\212\225", nullptr));
         comboBox->setItemText(1, QApplication::translate("Visitor_Widget", "\346\231\272\350\203\275\345\256\232\346\212\225", nullptr));
-        comboBox->setItemText(2, QApplication::translate("Visitor_Widget", "\316\240\345\256\232\346\212\225", nullptr));
+        comboBox->setItemText(2, QApplication::translate("Visitor_Widget", "\350\207\252\345\256\232\344\271\211\347\255\226\347\225\245", nullptr));
 
         pushButton_5->setText(QApplication::translate("Visitor_Widget", "\346\224\266\347\233\212\350\256\241\347\256\227", nullptr));
     } // retranslateUi

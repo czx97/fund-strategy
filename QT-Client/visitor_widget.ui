@@ -133,7 +133,7 @@ p, li { white-space: pre-wrap; }
         </item>
         <item>
          <property name="text">
-          <string>Π定投</string>
+          <string>自定义策略</string>
          </property>
         </item>
        </widget>

@@ -9,7 +9,7 @@ Visitor_Widget::Visitor_Widget(QWidget *parent) :
 {
     ui->setupUi(this);
     tcp_socket = new QTcpSocket();
-    tcp_socket->connectToHost("192.168.205.141",9999);
+    tcp_socket->connectToHost("39.105.82.172",9999);
     connect(tcp_socket,&QTcpSocket::readyRead,this,&Visitor_Widget::slot_recv);        //处理接受信息
     connect(ui->pushButton_5,&QPushButton::clicked,this,&Visitor_Widget::slot_send);   //处理发送信息
     connect(tcp_socket,&QTcpSocket::disconnected,this,&Visitor_Widget::slot_disconnect);  //断开连接时释放及时socket
@@ -39,7 +39,7 @@ void Visitor_Widget::slot_recv()
     float range = recv_msg.toFloat();
     qDebug()<<range;
     ui->lcdNumber->setSmallDecimalPoint(false);
-    ui->lcdNumber->setDigitCount(5);
+    ui->lcdNumber->setDigitCount(7);
     ui->lcdNumber->display(range);
 }
 //处理断开连接
