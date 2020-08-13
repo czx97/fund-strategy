@@ -7,7 +7,7 @@
 #include<unistd.h>         //POSIX系统调用API
 #include<string.h>         //字符串操作，与string并列存在
 #include<errno.h>          //通过错误码提示错误信息
-#include<mysql/mysql.h>
+#include<mysql/mysql.h>    //编译数据库文件
 
 #define SERV_PORT 9999
 
@@ -101,6 +101,7 @@ float db_read(MYSQL*conn,char* query,int index){
 	else{
 		sys_err("query error");
 	}
+	mysql_close(conn);
 	
 	return range;
 }
